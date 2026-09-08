@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.maizzle/
+.env
+.DS_Store
+.idea
+.vscode
+Thumbs.db
+.commandcode/
+package-lock.json

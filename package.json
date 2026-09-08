@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "maizzle serve",
+    "build": "maizzle build",
+    "postinstall": "maizzle prepare",
+    "screenshot": "node scripts/capture-screenshot.js"
+  },
+  "dependencies": {
+    "@maizzle/framework": "^6.1.3",
+    "playwright": "^1.63.0"
+  }
+}
