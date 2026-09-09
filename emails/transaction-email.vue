@@ -5,7 +5,7 @@ const orderNumber = customerData.orderNumber
 </script>
 
 <template>
-  <Layout class="bg-adidas-light-gray">
+  <Layout class="bg-adidas-light-gray" title="Your Custom Adidas Order!">
     <Preheader>
       Your custom Adidas order is almost ready — view your design and order details.
     </Preheader>

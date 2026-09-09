@@ -36,7 +36,6 @@ function startStaticServer(port) {
 }
 
 async function capture(emailName, port = 3456) {
-  const server = await startStaticServer(port)
   const browser = await chromium.launch()
   const context = await browser.newContext()
   const page = await context.newPage()
@@ -65,11 +64,28 @@ async function capture(emailName, port = 3456) {
   console.log(`Screenshot saved: ${mobilePath}`)
 
   await browser.close()
+}
+
+const explicitName = process.argv[2]
+
+async function main() {
+  let emailNames = [explicitName]
+
+  if (!explicitName) {
+    // Auto-discover all top-level .html files in dist/
+    emailNames = fs.readdirSync(distDir)
+      .filter((f) => f.endsWith('.html') && f !== 'index.html')
+      .map((f) => path.basename(f, '.html'))
+  }
+
+  const server = await startStaticServer(3456)
+  for (const name of emailNames) {
+    await capture(name, 3456)
+  }
   server.close()
 }
 
-const emailName = process.argv[2] || 'transaction-email'
-capture(emailName).catch((err) => {
+main().catch((err) => {
   console.error(err)
   process.exit(1)
 })

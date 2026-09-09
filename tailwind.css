@@ -12,4 +12,15 @@
   --font-family-roboto-condensed: "Roboto Condensed", Helvetica, Arial, sans-serif;
   --font-family-open-sans: "Open Sans", Helvetica, Arial, sans-serif;
   --font-family-rubik: "Rubik", Helvetica, Arial, sans-serif;
+
+  --color-glens-cream: #F6F4D8;
+  --color-glens-green: #236026;
+  --color-glens-black: #0a0a0a;
+  --color-glens-medium-gray: #cacaca;
+
+  --font-family-libre-franklin: "Libre Franklin", Helvetica, Arial, sans-serif;
+}
+
+.text-left {
+  text-align: left;
 }

@@ -25,11 +25,27 @@ const props = defineProps({
     type: String,
     default: undefined
   },
+  googleFont: {
+    type: String,
+    default: 'Inter:wght@300;400;500;600;700'
+  },
+  fontFamily: {
+    type: String,
+    default: 'Inter'
+  },
+  title: {
+    type: String,
+    default: 'Email'
+  },
 })
 
+const fontFamilyStack = computed(() =>
+  `"${props.fontFamily}", Helvetica, Arial, sans-serif`
+)
+
 const attrs = useAttrs()
-const bodyMergedClass = computed(() => twMerge('m-0 p-0 size-full [word-break:break-word]', props.bodyClass))
-const articleMergedClass = computed(() => twMerge('[font-size:max(16px,1rem)] font-inter', attrs.class as string))
+const bodyMergedClass = computed(() => twMerge('m-0 p-0 size-full text-center [word-break:break-word] bg-adidas-light-gray', props.bodyClass))
+const articleMergedClass = computed(() => twMerge('[font-size:max(16px,1rem)] max-w-150 mx-auto bg-white text-left', attrs.class as string))
 
 const EmptyHead = () => createStaticVNode('<head></head>', 1)
 
@@ -67,13 +83,14 @@ const htmlXmlns = {
     <meta charset="utf-8">
     <meta name="x-apple-disable-message-reformatting">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
     <MsoHead />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="screen">
+    <link :href="`https://fonts.googleapis.com/css2?family=${googleFont}&display=swap`" rel="stylesheet" media="screen">
     <style>
       @import "../tailwind.css";
 
@@ -90,7 +107,7 @@ const htmlXmlns = {
       :aria-label="ariaLabel"
       :lang="lang"
       :dir="dir"
-      style="font-size: medium;"
+      :style="{ fontSize: 'medium', fontFamily: fontFamilyStack, textAlign: 'left' }"
       data-juice-duplicates
       v-bind="{ ...attrs, class: undefined }"
       :class="articleMergedClass"
