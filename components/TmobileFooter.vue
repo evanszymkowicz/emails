@@ -1,17 +1,17 @@
 <template>
   <Container class="bg-tmobile-black">
-    <Row>
-      <Column class="w-4/12 sm:w-full">
+    <Row style="font-size: 0;">
+      <Column class="w-4/12 align-top sm:w-full">
         <Section class="px-4">
-          <Spacer class="h-2.5" />
+          <Spacer class="h-4" />
           <Heading
-            as="h3"
+            level="3"
             class="m-0 font-noto-sans text-lg font-bold text-tmobile-white"
           >
             General
           </Heading>
-          <Spacer class="h-2" />
-          <Text class="m-0 font-noto-sans text-sm leading-[2] text-tmobile-white">
+          <Spacer class="h-1.5" />
+          <Text class="m-0 font-noto-sans text-sm leading-[1.75] text-tmobile-white">
             <Link href="/#" class="text-sm text-tmobile-magenta no-underline">
               Log In
             </Link>
@@ -37,20 +37,20 @@
               Android App
             </Link>
           </Text>
-          <Spacer class="h-4" />
+          <Spacer class="h-2" />
         </Section>
       </Column>
-      <Column class="w-4/12 sm:w-full">
+      <Column class="w-4/12 align-top sm:w-full">
         <Section class="px-4">
-          <Spacer class="h-2.5" />
+          <Spacer class="h-4" />
           <Heading
-            as="h3"
+            level="3"
             class="m-0 font-noto-sans text-lg font-bold text-tmobile-white"
           >
             Legal
           </Heading>
-          <Spacer class="h-2" />
-          <Text class="m-0 font-noto-sans text-sm leading-[2] text-tmobile-white">
+          <Spacer class="h-1.5" />
+          <Text class="m-0 font-noto-sans text-sm leading-[1.75] text-tmobile-white">
             <Link
               href="/en/privacy-policy.html"
               class="text-sm text-tmobile-magenta no-underline"
@@ -72,20 +72,20 @@
               &#34;Got Your Back&#34; Terms and Conditions
             </Link>
           </Text>
-          <Spacer class="h-4" />
+          <Spacer class="h-2" />
         </Section>
       </Column>
-      <Column class="w-4/12 sm:w-full">
+      <Column class="w-4/12 align-top sm:w-full">
         <Section class="px-4">
-          <Spacer class="h-2.5" />
+          <Spacer class="h-4" />
           <Heading
-            as="h3"
+            level="3"
             class="m-0 font-noto-sans text-lg font-bold text-tmobile-white"
           >
             Let&#39;s Chat
           </Heading>
-          <Spacer class="h-2" />
-          <Text class="m-0 font-noto-sans text-sm leading-[2] text-tmobile-white">
+          <Spacer class="h-1.5" />
+          <Text class="m-0 font-noto-sans text-sm leading-[1.75] text-tmobile-white">
             <Link
               href="/en/support.html"
               class="text-sm text-tmobile-magenta no-underline"
@@ -100,43 +100,45 @@
               Support
             </Link>
           </Text>
-          <Spacer class="h-4" />
+          <Spacer class="h-2" />
         </Section>
       </Column>
     </Row>
-    <Row>
-      <Column class="w-6/12 sm:w-full">
+    <Row style="font-size: 0;">
+      <Column class="w-6/12 align-top sm:w-full">
+        <Spacer class="h-4" />
         <Section class="px-4">
           <Img
             src="/tmobile-email/bm-fdic-logo.png"
             alt="BankMobile Division Customers Bank, Member FDIC"
-            width="180"
+            width="250"
           />
         </Section>
         <Spacer class="h-2.5" />
       </Column>
-      <Column class="w-6/12 sm:w-full">
-        <Section class="px-4 text-right">
+      <Column class="w-6/12 align-top sm:w-full">
+        <Spacer class="h-4" />
+        <Section class="px-4 text-right sm:text-center">
           <Img
             src="/tmobile-email/tmobile-logo.png"
             alt="T-Mobile"
             width="120"
-            class="ml-auto"
+            class="ml-auto sm:mx-auto sm:block"
           />
         </Section>
         <Spacer class="h-2.5" />
       </Column>
     </Row>
-    <Row>
-      <Column class="w-6/12 sm:w-full">
+    <Row style="font-size: 0;">
+      <Column class="w-6/12 align-top sm:w-full">
         <Text class="m-0 px-4 font-noto-sans text-sm font-bold text-tmobile-white">
           &#9400; 2018-2019 T-Mobile USA, INC.
         </Text>
         <Spacer class="h-4" />
       </Column>
-      <Column class="w-6/12 sm:w-full">
+      <Column class="w-6/12 align-top sm:w-full">
         <Text
-          class="m-0 px-4 text-right font-noto-sans text-sm font-bold text-tmobile-white"
+          class="m-0 px-4 text-right font-noto-sans text-sm font-bold text-tmobile-white sm:text-center"
         >
           Visit T-Mobile.com
         </Text>

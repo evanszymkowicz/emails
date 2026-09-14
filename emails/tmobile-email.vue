@@ -8,6 +8,7 @@ const dataPoints = tmobileData.dataPoints
 <template>
   <Layout
     class="bg-tmobile-light-gray font-noto-sans"
+    bodyClass="bg-tmobile-light-gray"
     google-font="Noto+Sans:wght@400;700"
     font-family="Noto Sans"
     title="T-mobile MONEY...more than Just a Bank"

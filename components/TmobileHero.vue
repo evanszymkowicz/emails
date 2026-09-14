@@ -16,15 +16,28 @@ const props = defineProps({
 </script>
 
 <template>
-  <Container
-    class="bg-tmobile-black bg-cover bg-center"
-    style="background-image: url('/tmobile-email/tmobile-money-store.jpg');"
-  >
+  <Container class="bg-tmobile-white">
     <Row>
       <Column class="w-full">
+        <Img
+          src="/tmobile-email/tmobile-money-store.jpg"
+          alt="T-Mobile storefront with the T-Mobile MONEY app and debit card"
+          width="600"
+          class="block w-full"
+        />
+      </Column>
+    </Row>
+  </Container>
+
+  <Container
+    class="bg-tmobile-black bg-cover bg-center"
+    style="background-image: url('/tmobile-email/tmobile-purple-bg.jpg');"
+  >
+    <Row style="font-size: 0;">
+      <Column class="w-7/12 align-top sm:w-full">
         <Spacer class="h-6" />
         <Heading
-          as="h1"
+          level="1"
           class="m-0 px-5 font-noto-sans text-[32px] font-bold leading-[1.2] text-tmobile-white"
         >
           Not another bank.<br />A better one.
@@ -36,22 +49,31 @@ const props = defineProps({
           • Over {{ props.atms }} no-fee ATMs.<br />
           • FDIC-insured.
         </Text>
-        <Spacer class="h-5" />
+        <Spacer class="h-6" />
+      </Column>
+      <Column class="w-5/12 align-top sm:w-full">
+        <Spacer class="h-9" />
+        <Spacer class="h-9" />
+        <Spacer class="h-6" />
+        <Spacer class="h-4" />
         <Section class="px-5">
-          <Button
-            :href="props.signupLink"
-            class="inline-block border-2 border-solid border-tmobile-magenta bg-tmobile-magenta px-5 py-2 font-noto-sans text-base font-bold text-tmobile-white no-underline"
-          >
-            Sign up
-          </Button>
-        </Section>
-        <Spacer class="h-5" />
-        <Section class="px-5">
-          <Img
-            src="/tmobile-email/btn-app-store.png"
-            alt="Download on the App Store"
-            width="130"
-          />
+          <Row style="font-size: 0;">
+            <Column class="w-6/12 align-top sm:w-full sm:text-center">
+              <Button
+                :href="props.signupLink"
+                class="inline-block border-2 border-solid border-tmobile-magenta bg-tmobile-magenta px-4 py-1.5 font-noto-sans text-sm font-bold text-tmobile-white no-underline"
+              >
+                Sign up
+              </Button>
+            </Column>
+            <Column class="w-6/12 align-top sm:w-full sm:text-center">
+              <Img
+                src="/tmobile-email/btn-app-store.png"
+                alt="Download on the App Store"
+                width="90"
+              />
+            </Column>
+          </Row>
         </Section>
         <Spacer class="h-6" />
       </Column>

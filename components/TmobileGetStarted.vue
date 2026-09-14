@@ -10,13 +10,13 @@ const props = defineProps({
 <template>
   <Container
     class="bg-tmobile-black bg-cover bg-center"
-    style="background-image: url('/tmobile-email/tmobile-purple-bg.png');"
+    style="background-image: url('/tmobile-email/tmobile-purple-bg.jpg');"
   >
     <Row>
       <Column class="w-full text-center">
         <Spacer class="h-9" />
         <Heading
-          as="h3"
+          level="3"
           class="m-0 px-4 font-noto-sans text-[28px] font-bold text-tmobile-white"
         >
           Get started in minutes.

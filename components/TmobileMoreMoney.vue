@@ -36,7 +36,7 @@ const compareLink =
       <Column class="w-full text-center">
         <Spacer class="h-2.5" />
         <Heading
-          as="h2"
+          level="2"
           class="m-0 px-4 font-noto-sans text-[30px] font-bold text-tmobile-magenta"
         >
           More interest = more MONEY
@@ -82,12 +82,12 @@ const compareLink =
   </Container>
 
   <Container class="bg-tmobile-light-gray">
-    <Row>
-      <Column class="w-7/12 sm:w-full">
+    <Row style="font-size: 0;">
+      <Column class="w-7/12 align-top sm:w-full">
         <Spacer class="h-5" />
         <Section class="px-4">
           <Heading
-            as="h2"
+            level="2"
             class="m-0 font-noto-sans text-[30px] font-bold leading-[1.2] text-tmobile-black"
           >
             No more account<br />fees.
@@ -108,7 +108,7 @@ const compareLink =
         </Section>
         <Spacer class="h-5" />
       </Column>
-      <Column class="w-5/12 sm:w-full">
+      <Column class="w-5/12 align-top sm:w-full">
         <Spacer class="h-5" />
         <Img
           src="/tmobile-email/home-fees-image.png"
