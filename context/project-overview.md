@@ -40,7 +40,7 @@ both web preview and email sending.
 | Animation (CAVA grilling) | `animation-email` | 1 | GIF-heavy hero; images imgur-hosted with local copies in `src/assets/img/`; long UTM links | Ported |
 | T-Mobile Money | `tmobile-email` | 1 | `tmobileData.json` (APY/cash-back figures); per-section partials (hero, getstarted, moremoney, privacy) | Not ported |
 | Kayak mockup | `kayak-mockup` | 1 | `kayakEmail.json` — deal-of-the-day + offers array (→ loop); dedicated kayak layout | Not ported |
-| Aug newsletter (Heroku) | `augnewsletter-email` | 1 | Social icons + Heroku branding assets; never had a compiled dist | Not ported |
+| Aug newsletter (Heroku) | `augnewsletter-email` | 1 | Social icons + Heroku branding assets; never had a compiled dist | Ported |
 | Upcoming schedule (ESPN+) | `upcoming-schedule-email` | 5 (index, collegefootball-090719, disneyplus, ufc242, usopen) | buttons partial driven by front matter; `espnData.json` (subscriber email); team-logo assets | Not ported |
 
 Each port is specced in `context/features/port-<name>.md` and implemented via the
