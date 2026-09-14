@@ -39,6 +39,14 @@
   --color-espn-body: #555555;
   --color-espn-footer-text: #8d99ad;
   --color-espn-light-gray: #f3f3f3;
+
+  --color-tmobile-magenta: #e20074;
+  --color-tmobile-black: #0a0a0a;
+  --color-tmobile-white: #fefefe;
+  --color-tmobile-light-gray: #f3f3f3;
+  --color-tmobile-privacy: #a0a1a3;
+
+  --font-family-noto-sans: "Noto Sans", Helvetica, Arial, sans-serif;
 }
 
 .text-left {
