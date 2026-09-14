@@ -19,6 +19,14 @@
   --color-glens-medium-gray: #cacaca;
 
   --font-family-libre-franklin: "Libre Franklin", Helvetica, Arial, sans-serif;
+
+  --color-cava-black: #0a0a0a;
+  --color-cava-white: #fefefe;
+  --color-cava-light-gray: #f3f3f3;
+  --color-cava-medium-gray: #656565;
+  --color-cava-orange: #FFB134;
+
+  --font-family-cava-serif: Georgia, "Times New Roman", Times, serif;
 }
 
 .text-left {

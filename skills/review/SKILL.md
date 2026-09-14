@@ -31,3 +31,11 @@ distinct from `test` (build/render checks) and from the `code-scanner` agent
 - This is a judgment check against the spec, not a re-run of builds/renders — that's
   `test`.
 - Don't skip straight to "looks fine" without reading the Acceptance Criteria first.
+- Verify each finding against the actual source (re-read the cited file:line ranges,
+  re-render where the claim is visual) before acting on it — reviews and specs can both
+  be wrong, and an incorrect "fix" is a real regression. When a finding doesn't hold,
+  reject it explicitly and report a **Fixed / Rejected** split with the rationale, so
+  the verdict stays auditable.
+- Keep standalone review/planning artifacts out of the repo — they are working notes,
+  not part of the shipped feature. Summarize the outcome in `context/change-log/` and
+  point `context/current-feature.md` at the next slice instead.

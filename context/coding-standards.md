@@ -32,7 +32,9 @@ Inky → Maizzle mapping from the old code: `container` → `<Container>`, `wrap
   `<Section class="px-*">`.
 - Prefer `<Spacer>` between block elements (Outlook ignores some margins); margins are
   fine on text.
-- Every `<Img>` gets `alt` and `width`. PNG/JPEG/GIF in production.
+- Every `<Img>` gets `alt` and `width`. PNG/JPEG/GIF in production. Pick `width`
+  from the source asset's native dimensions (e.g. `file` on the original) scaled to
+  the email's content width — preserve the aspect ratio, never guess and stretch.
 - No `position: absolute/relative`, no embedded SVG, no flex/grid for layout —
   `<Row>`/`<Column>` instead.
 - Don't restate a `text-*` size's built-in line-height with `leading-*` unless deviating.
@@ -43,6 +45,8 @@ Inky → Maizzle mapping from the old code: `container` → `<Container>`, `wrap
 - Tailwind utilities for all styling; theme tokens (brand colors, fonts, spacing ported
   from each old repo's `_settings.scss`) defined in the shared theme config — one place,
   not per-template inline values.
+- Keep spacing symmetric and even across headers, sections, and content blocks unless the
+  original design is deliberately asymmetric.
 - Responsive: `sm:` (≤600px) and `xs:` (≤430px) variants as progressive enhancement.
 - Dark mode: `dark:` and `<Img dark-src>` where cheap; treat as enhancement, never break
   light mode for it.

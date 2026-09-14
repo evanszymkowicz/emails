@@ -46,8 +46,13 @@ npm run screenshot # capture portfolio PNGs of the built emails
 
 ## Agent tooling
 
-This repo ships harness-neutral skills, agent prompts, and opencode shims. Treat the
-repo-root files as canonical; `.opencode/` is a thin shim over them.
+This repo ships harness-neutral skills, agent prompts, and hook cores. Harness-specific
+wiring (`.opencode/`) is a thin shim over these files — treat them as canonical.
+
+- **Precedence.** Harness-learned preference files are advisory. When they conflict
+  with this file, `context/`, `skills/`, or `agents/`, the canonical files win. When a
+  harness learning proves durable and isn't yet captured here, promote it back into the
+  canonical file it belongs to rather than letting the shim drift into a shadow workflow.
 
 - **Agent prompts** (`agents/`): `code-scanner` (security/correctness audit of templates,
   components, and config), `ui-review` (reviews rendered emails in the dev server via the

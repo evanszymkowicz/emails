@@ -26,9 +26,9 @@
 
 ## Verify Before Handing Off
 
-- `npm run build` (once scaffolded) must complete without errors for the email(s) you touched.
-- Spot-check rendered output in the dev server (or via the playwright MCP): layout intact
-  at desktop and ~375px widths, images resolve, preheader present.
+- `npm run build` must complete without errors for the email(s) you touched.
+- Spot-check rendered output with the playwright MCP against the dev server: layout
+  intact at desktop and ~375px widths, images resolve, preheader present.
 - When porting, compare against the old email's `dist/index.html` before calling it done.
 - Update this section as tooling lands.
 
@@ -47,7 +47,9 @@
 
 - Read-only inspection: `ls`, `cat`, `grep`, `find`, `jq`, and read-only git (`status`,
   `diff`, `log`, `show`, `ls-files`, `check-ignore`).
-- Build/dev-server runs: `npm run dev`, `npm run build` (once scaffolded).
+- Build/render runs: `npm run dev`, `npm run build`, `npm run screenshot`, `node
+  scripts/*` (layout/alignment/button/screenshot checks) — plus the playwright MCP
+  browser tools for live inspection.
 
 Still ask first: dependency installs (`npm install`, `npx maizzle new`), destructive
 operations (`rm`, `git reset/restore/clean`), anything touching credentials, `.env`, or
@@ -57,4 +59,6 @@ sending email.
 
 - If something isn't working after 2–3 attempts, stop and explain the issue rather than
   trying random fixes.
-- Ask for clarification when requirements are unclear.
+- Ask for clarification when requirements are unclear — especially on terse
+  design feedback ("this is all wrong") with nothing specified. Re-examine the output
+  and ask what looks broken rather than guessing from silence.

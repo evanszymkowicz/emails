@@ -1,0 +1,71 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "context/ai-interaction.md",
+    "context/coding-standards.md",
+    "context/project-overview.md"
+  ],
+  "skills": {
+    "paths": ["skills"]
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"],
+      "enabled": true
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "ls*": "allow",
+      "cat*": "allow",
+      "grep*": "allow",
+      "find*": "allow",
+      "jq*": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow",
+      "git ls-files*": "allow",
+      "git check-ignore*": "allow",
+      "npm run dev*": "allow",
+      "npm run build*": "allow",
+      "npm run screenshot*": "allow",
+      "node scripts/*": "allow",
+      "npx playwright*": "allow",
+      "git commit*": "deny",
+      "git push*": "deny",
+      "git reset*": "deny",
+      "git restore*": "deny",
+      "git clean*": "deny",
+      "rm*": "deny",
+      "npm install*": "ask",
+      "npx maizzle new*": "ask"
+    },
+    "external_directory": {
+      "~/projects/old-emails/**": "allow"
+    },
+    "edit": {
+      "~/projects/old-emails/**": "deny"
+    }
+  },
+  "agent": {
+    "code-scanner": {
+      "description": "Use this agent for a focused audit of recently written or modified code in this repo — Maizzle templates, Vue email components, Tailwind theme config, and build config — for security, correctness, structure, and email-client pitfalls. Reports only real, currently-present issues, never missing features.",
+      "mode": "subagent",
+      "prompt": "{file:./agents/code-scanner.md}",
+      "permission": {
+        "edit": "deny"
+      }
+    },
+    "ui-review": {
+      "description": "Use this agent to review rendered emails in the dev server: layout at desktop and mobile widths, image integrity, alt text, dark mode, and comparison against the old email's compiled output. Requires the Maizzle dev server (or build output) — do not use it before the project is scaffolded.",
+      "mode": "subagent",
+      "prompt": "{file:./agents/ui-review.md}",
+      "permission": {
+        "edit": "deny"
+      }
+    }
+  }
+}

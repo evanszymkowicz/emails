@@ -29,8 +29,12 @@ specs as if they were rendered email.
 
 ## Method
 
-Start the dev server if not running (check `package.json` scripts). Exercise the actual
-emails at both widths. Verify each finding is real and cite the template/component file.
+Start the dev server if not running (check `package.json` scripts). Drive the actual
+emails at both widths with the playwright MCP browser tools; use `node scripts/*` when
+you need saved PNGs rather than live inspection. Verify each finding is real and cite
+the template/component file.
+Resolve user feedback phrased as visible text (e.g. "green upcoming events text") to the
+matching DOM node before acting — never guess from the description alone.
 
 ## Output
 

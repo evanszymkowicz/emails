@@ -23,7 +23,9 @@ old repos live in `~/projects/old-emails/` and are **read-only reference**.
      `augnewsletter-email` was never compiled — compare against `src/pages/index.html`
      intent instead.)
 2. **Copy assets** into the repo's static directory under a per-email subdirectory. Copy
-   from `src/assets/img/` (not `dist/`) so originals stay pristine.
+   from `src/assets/img/` (not `dist/`) so originals stay pristine. When setting
+   `<Img width>`, check the source asset's native dimensions and preserve its aspect
+   ratio at the email's content width.
 3. **Port theme tokens** (colors, fonts, spacing from `_settings.scss` + template SCSS)
    into the shared Tailwind theme config — one place, not per-template inline values.
 4. **Build the template** as a Vue SFC per `@context/coding-standards.md`:

@@ -1,39 +1,41 @@
-# Current Feature: Port: Restaurant Email (Glen's Garden Market)
+# Current Feature: Port: Animation Email (CAVA grilling)
 
-Full spec: @context/features/port-restaurant-emails.md
+Full spec: @context/features/port-animation-email.md
 
 ## Goal
 
-Rebuild the Glen's Garden Market email (old repo: `~/projects/old-emails/restaurant-emails/`)
-as a Maizzle template, following the `add-email` checklist and the modernization policy — same
-layout, copy, and links, with refreshed code.
+Rebuild the CAVA "John, grill school is in session" email (old repo:
+`~/projects/old-emails/animation-email/`) as a Maizzle template, following the `add-email`
+checklist and the modernization policy — same layout, copy, and links, with refreshed code
+and the animated GIF hero intact.
 
 ## Status
 
-Not started.
+In Progress (working on main per user direction — branch convention skipped for this port).
 
 ## Next Steps
 
 1. Follow the `add-email` skill checklist end to end.
-2. Reuse the shared header/footer components established by the transaction-email pilot;
-   extend rather than duplicate.
-3. The old `buttons` and `divider` partials become shared Vue components (this email is
-   the natural home for them — the ESPN email's buttons partial lands later).
-4. Port the `bold` and `mainButton` helper patterns as components or direct markup.
-5. Copy assets (glens-specials.png, glens-spread.jpg, glensgardenmarket.jpg,
-   thursdays.png, framegrab.png) into the per-email static directory.
+2. Copy assets from `src/assets/img/` — the GIF hero (`banner-img.gif`, "STAY FIRED UP"),
+   the footer hashtag strip (`cookwithfire.gif`, "#COOKWITHFIRE") and
+   the food photography (`cava.jpg`, `grilled-chicken.jpg`, `meatballs.jpg`,
+   `seasonal.jpg`) and social icons (`fa-*.png`).
+3. The old template points at i.imgur.com URLs that duplicate the local assets — swap
+   them for local copies; keep the live cava.com / forthosewhosavor.com links (with
+   their long UTM strings) verbatim.
+4. Verify GIF animation in rendered checks — this email's identity is motion.
 
 ## Acceptance Criteria
 
-- [ ] One Maizzle template renders the full email with all sections from the old page.
-- [ ] Buttons/divider patterns exist as shared components, reused here and ready for the
-      ESPN port.
-- [ ] Copy and links verbatim; every `<Img>` has `alt` + `width`.
+- [ ] One Maizzle template renders the full email: hero, big GIF, sizzle copy, three
+      protein bowls, two CTA buttons, second copy block, second button.
+- [ ] All images resolve locally (no imgur dependencies); GIFs animate in render checks.
+- [ ] UTM-bearing links verbatim; every `<Img>` has `alt` + `width`.
 - [ ] Clean production build; renders checked at desktop + ~375px; side-by-side against
       the old `dist/index.html` with deltas matching the modernization policy.
 
 ## Out of Scope
 
 - Sending the email or wiring an ESP.
-- New copy or a redesign beyond the modernization policy.
-- The old `dist/index.zip` packaging step (no equivalent needed).
+- New copy or photography; redesign beyond the modernization policy.
+- The old Heroku `Procfile` / deploy tooling.
