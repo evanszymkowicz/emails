@@ -33,6 +33,12 @@
   --color-heroku-ink: #3F3F44;
 
   --font-family-cava-serif: Georgia, "Times New Roman", Times, serif;
+
+  --color-espn-gold: #fab200;
+  --color-espn-navy: #013265;
+  --color-espn-body: #555555;
+  --color-espn-footer-text: #8d99ad;
+  --color-espn-light-gray: #f3f3f3;
 }
 
 .text-left {
