@@ -37,7 +37,7 @@ both web preview and email sending.
 |---|---|---|---|---|
 | Transaction (adidas order) | `transaction-email` | 1 | `customerData.json` (order number); preheader partial; custom flexgrid mixin | Ported |
 | Restaurant (Glen's Garden Market) | `restaurant-emails` | 1 | buttons/divider partials; bold + mainButton helpers | Not ported |
-| Animation (CAVA grilling) | `animation-email` | 1 | GIF-heavy hero; images imgur-hosted with local copies in `src/assets/img/`; long UTM links | Not ported |
+| Animation (CAVA grilling) | `animation-email` | 1 | GIF-heavy hero; images imgur-hosted with local copies in `src/assets/img/`; long UTM links | Ported |
 | T-Mobile Money | `tmobile-email` | 1 | `tmobileData.json` (APY/cash-back figures); per-section partials (hero, getstarted, moremoney, privacy) | Not ported |
 | Kayak mockup | `kayak-mockup` | 1 | `kayakEmail.json` — deal-of-the-day + offers array (→ loop); dedicated kayak layout | Not ported |
 | Aug newsletter (Heroku) | `augnewsletter-email` | 1 | Social icons + Heroku branding assets; never had a compiled dist | Not ported |
