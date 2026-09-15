@@ -16,8 +16,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <Container class="bg-tmobile-white">
-    <Row>
+  <Container class="bg-tmobile-black">
+    <Row style="font-size: 0; line-height: 0;">
       <Column class="w-full">
         <Img
           src="/tmobile-email/tmobile-money-store.jpg"
@@ -27,13 +27,11 @@ const props = defineProps({
         />
       </Column>
     </Row>
-  </Container>
 
-  <Container
-    class="bg-tmobile-black bg-cover bg-center"
-    style="background-image: url('/tmobile-email/tmobile-purple-bg.jpg');"
-  >
-    <Row style="font-size: 0;">
+    <Row
+      class="bg-cover bg-center"
+      style="background-image: url('/tmobile-email/tmobile-purple-bg.jpg'); font-size: 0;"
+    >
       <Column class="w-7/12 align-top sm:w-full">
         <Spacer class="h-6" />
         <Heading
@@ -51,26 +49,24 @@ const props = defineProps({
         </Text>
         <Spacer class="h-6" />
       </Column>
-      <Column class="w-5/12 align-top sm:w-full">
-        <Spacer class="h-9" />
-        <Spacer class="h-9" />
-        <Spacer class="h-6" />
+      <Column class="w-5/12 align-bottom sm:w-full">
         <Spacer class="h-4" />
         <Section class="px-5">
           <Row style="font-size: 0;">
-            <Column class="w-6/12 align-top sm:w-full sm:text-center">
+            <Column class="w-1/2 align-middle">
               <Button
                 :href="props.signupLink"
-                class="inline-block border-2 border-solid border-tmobile-magenta bg-tmobile-magenta px-4 py-1.5 font-noto-sans text-sm font-bold text-tmobile-white no-underline"
+                class="inline-block border-2 border-solid border-tmobile-magenta bg-tmobile-magenta px-3 py-1 font-noto-sans text-xs font-bold text-tmobile-white no-underline"
               >
                 Sign up
               </Button>
             </Column>
-            <Column class="w-6/12 align-top sm:w-full sm:text-center">
+            <Column class="w-1/2 align-middle">
               <Img
                 src="/tmobile-email/btn-app-store.png"
                 alt="Download on the App Store"
-                width="90"
+                width="70"
+                style="max-width: 70px;"
               />
             </Column>
           </Row>

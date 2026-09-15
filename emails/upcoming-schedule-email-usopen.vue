@@ -25,22 +25,24 @@ const buttonLink = 'https://tinyurl.com/y6lmejqp'
 
     <!-- Hero -->
     <Container class="bg-white">
-      <Row>
+      <Row style="font-size: 0; line-height: 0;">
         <Column>
           <Img
             src="/upcoming-schedule-email/espnlogotop.jpg"
             alt="ESPN+"
             width="600"
+            class="block w-full"
           />
         </Column>
       </Row>
       <EspnGoldBar />
-      <Row>
+      <Row style="font-size: 0; line-height: 0;">
         <Column>
           <Img
             src="/upcoming-schedule-email/espn-usopen.jpg"
             alt="US Open on ESPN+"
             width="600"
+            class="block w-full"
           />
         </Column>
       </Row>

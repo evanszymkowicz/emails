@@ -62,22 +62,24 @@ const schedule = [
 
     <!-- Hero -->
     <Container class="bg-white">
-      <Row>
+      <Row style="font-size: 0; line-height: 0;">
         <Column>
           <Img
             src="/upcoming-schedule-email/espn-collegefootball.jpg"
             alt="Upcoming college football on ESPN+"
             width="600"
+            class="block w-full"
           />
         </Column>
       </Row>
       <EspnGoldBar />
-      <Row>
+      <Row style="font-size: 0; line-height: 0;">
         <Column>
           <Img
             src="/upcoming-schedule-email/osu-espn.png"
             alt="McNeese vs Oklahoma St."
             width="600"
+            class="block w-full"
           />
         </Column>
       </Row>
