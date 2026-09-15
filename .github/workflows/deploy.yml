@@ -26,8 +26,9 @@ jobs:
       - run: npm run build
         env:
           # Absolute asset URLs under the project-site base path.
-          # Must match the Pages URL below (see maizzle.config.js).
-          MAIZZLE_BASE_URL: https://evanszymkowicz.github.io/emails/
+          # No trailing slash: Maizzle concatenates it directly onto
+          # root-relative "/per-email/asset" paths (see maizzle.config.js).
+          MAIZZLE_BASE_URL: https://evanszymkowicz.github.io/emails
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist

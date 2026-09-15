@@ -70,14 +70,14 @@ const socials = [
     <Section class="bg-cava-light-gray">
       <Container class="bg-cava-white">
         <!-- CAVA name banner -->
-        <Row>
+        <Row style="font-size: 0; line-height: 0;">
           <Column>
             <Img src="/animation-email/cava.jpg" alt="CAVA" width="600" class="block w-full" />
           </Column>
         </Row>
 
         <!-- Big animated GIF hero -->
-        <Row>
+        <Row style="font-size: 0; line-height: 0;">
           <Column>
             <Img src="/animation-email/banner-img.gif" alt="Stay fired up" width="600" class="block w-full" />
           </Column>
