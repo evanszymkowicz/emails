@@ -7,4 +7,3 @@ dist/
 .vscode
 Thumbs.db
 .commandcode/
-package-lock.json
